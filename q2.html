@@ -1,0 +1,143 @@
+﻿<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<title>Registration</title>
+
+<script>
+function validate(){
+	var fn= document.getElementById("fn").value;
+var pp1= document.getElementById("pp1").value;
+//var ln= document.getElementById("ln").value;
+var addr= document.getElementById("addr").value;
+	var pass1= document.getElementById("pass1").value;
+	var em= document.getElementById("em").value;
+	var pn= document.getElementById("pn").value;
+	
+	if(fn == "" || fn == null)
+	{
+		alert("First Name is mandatory , you cannot leave this empty");
+		return(false);
+	}
+	if(pp1 == "" || pp1 == null)
+	{
+		alert("UserID is mandatory , you cannot leave this empty");
+		return(false);
+	}
+	if((pass1 == "" || pass1 == null))
+	{
+		alert("Password is mandatory , you cannot leave this empty");
+		return(false);
+	}
+		
+	if(addr == "" || addr == null)
+	{
+		alert("Address is mandatory , you cannot leave this empty");
+		return(false);
+	}
+	if(em == "" || em == null)
+	{
+		alert("E-mail is mandatory , you cannot leave this empty");
+		return(false);
+	}if(pn == "" || pn == null)
+	{
+		alert("Phone No. is mandatory , you cannot leave this empty");
+		return(false);
+	}
+	
+	
+	else
+	{   
+		return CheckPassword();
+		return(false);
+			
+	}
+}
+function CheckPassword()
+{	var fn= document.getElementById("fn").value;
+var pp1= document.getElementById("pp1").value;
+var ln= document.getElementById("ln").value;
+var addr= document.getElementById("addr").value;
+	var pass1= document.getElementById("pass1").value;
+	var em= document.getElementById("em").value;
+	var pn= document.getElementById("pn").value;
+    var re;
+	
+		if(pass1!= "")
+	{
+		
+		if(pass1.length< 7)
+		{
+			
+			alert(" wrong!! password must contain 7-15 character and one numeric digit and special character is mandatory");
+			pass1.focus();
+			return false;
+		}
+		
+		
+	}
+		if(pass1!= "")
+	{
+		
+		if(pass1.length< 7)
+		{
+			alert(" WRONG!! Password must contain 7-15 characters and atleast one numeric digit and one uppercase letter");
+			pass1.focus();
+			return false;
+		}
+		
+	}
+	re = /[0-9]/;
+	if(!re.test(pass1))
+	{
+		alert("Password must contain atleast one number");
+		return false;
+	}
+	re = /[A-Z]/;
+	if(!re.test(pass1))
+	{
+		alert("Password must contain atleast one uppercase letter");
+		return false;
+	} 
+	else
+	{
+		
+		return CheckPassword();
+	}
+}
+
+
+</script>
+</head>
+<body bgcolor="cyan" >
+<h1 align="center">REGISTRATION FORM</h1>
+<center><table border='1'>
+<form method='POST'  style='width: 1061px; height: 586px' onsubmit='return validate()' onsubmit='return CheckPassword()'>
+	<font size=5px>
+	<strong>
+	First Name<font color=red>*</font>:</strong>
+	<input name='name' id="fn" type='text' style='width: 200px; height: 28px' /><br><br>
+	<strong>Last Name: </strong><input name='name'id="ln" type='text' style='width: 200px; height: 28px' />
+	<p><strong>User Id<font color=red>*</font>: </strong>
+	<input name='uid' id='pp1' type='text' style='width:200px; height: 28px' /></p>
+	<p><strong>Password<font color=red>*</font>: </strong>
+	<input name='pwd' id='pass1' type='password' style='width: 200px; height: 28px' /></p>
+	<p><strong>Address<font color=red>*</font>: </strong>
+	<input id='addr' type='textarea' style='width: 200px; height: 30px' /></p>
+	<p><strong>Email<font color=red>*</font>:
+	<input name="Text1"id="em" type="text" style="width: 200px; height: 30px"></strong></p>
+	<p><strong>Phone No<font color=red>*</font>: </strong><input name='sans' id="pn" type='text' style='width: 200px; height: 28px' /></p>
+	<p >
+	<strong>
+	<input name='submit'  type='submit' value='Submit' style='width: 86px; height: 37px'/></strong>&nbsp &nbsp
+	<strong>
+	<input name='Button2' type='reset'  value='Reset' style='width: 86px; height: 37px' /></strong></p>
+	</font>
+</form></center>
+
+<table>
+
+
+</body>
+
+</html>

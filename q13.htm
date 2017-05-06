@@ -1,0 +1,65 @@
+<head>
+<title> Slide Show Example </title>
+<script type="text/javascript">
+
+var slideimages = new Array() 
+slideimages[0] = new Image()
+slideimages[0].src = "a.jpg"
+slideimages[1] = new Image()
+slideimages[1].src = "b.jpg"
+slideimages[2] = new Image()
+slideimages[2].src = "c.jpg"
+slideimages[3] = new Image()
+slideimages[3].src = "d.jpg"
+slideimages[4] = new Image()
+slideimages[4].src = "e.jpg"
+slideimages[5] = new Image()
+slideimages[5].src = "f.jpg"
+slideimages[6] = new Image()
+slideimages[6].src = "g.jpg"
+slideimages[7] = new Image()
+slideimages[7].src = "h.jpg"
+
+</script>
+<style>
+.d{
+font-family:comic sans ms
+}
+</style>
+</head>
+
+<body bgcolor="blue">
+<img src="a.jpg" id="slide" style="position:absolute;left:20%;top:85%;height:400px;width:800px;border:solid 10px #123456"/>
+<script>
+var step=0
+function slideit(){
+if(!document.images)
+return
+document.getElementById('slide').src = slideimages[step].src
+if (step<7)
+  step++
+else
+  step=0
+setTimeout("slideit()",2000)
+}
+slideit()
+</script>
+<center>
+<table>
+<caption class="d"><h1><u> Bansthali University PHOTO GALLERY</u></h1></caption>
+<tr>
+<td>
+<img src="a.jpg"      style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="b.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="c.jpg"  style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="d.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+</tr>
+<tr>
+<td><img src="e.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="f.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="g.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td>
+<td><img src="h.jpg"   style="position:relative;width:300px;height:150px;border:solid 10px "/></td></tr>
+</table>
+<h1 class="d"><u>Snapshots</u></h1>
+</center>
+</body>

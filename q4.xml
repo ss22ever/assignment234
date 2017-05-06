@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+ <student>
+ <firstname>Arindam</firstname>
+ <lastname>Arora</lastname>
+ <userid>BTBTS12345</userid>
+ <pass>12345</pass>
+ <email>malvi@kate.co.in</email>
+ <address>Allahabad</address>
+ <phone>784561332</phone>
+ </student>
+ <student>
+ <firstname>Sneha</firstname>
+ <lastname>Sarkshi</lastname>
+ <userid>BTBTC34567</userid>
+ <pass>34567</pass>
+ <email>sneha@ahat.co.uk</email>
+ <address>C-12 Delhi</address>
+ <phone>7894560032</phone>
+ </student>
+ <student>
+ <firstname>Sept</firstname>
+ <lastname>Shekh</lastname>
+ <userid>BTBTC67890</userid>
+ <pass>67890</pass>
+ <email>mihir@gmail.com</email>
+ <address>S-678 Mumbai</address>
+ <phone>7894561332</phone>
+ </student>
+</class>

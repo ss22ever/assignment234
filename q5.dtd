@@ -1,0 +1,24 @@
+
+<!ELEMENT registrationform (title, entries)>
+
+<!ELEMENT title (#PCDATA)>
+
+<!ELEMENT entries (entry*)>
+
+<!ELEMENT entry (first_name, last_name, user_id , password , address , email , contact_no)>
+
+<!ELEMENT name (first, middle?, last)>
+
+<!ELEMENT first_name (#PCDATA)>
+
+<!ELEMENT last_name (#PCDATA)>
+
+<!ELEMENT user_id (#PCDATA)>
+
+<!ELEMENT password (#PCDATA)>
+
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT contact_no (#PCDATA)>

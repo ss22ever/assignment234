@@ -1,0 +1,85 @@
+<head>
+<title> Slide Show Example </title>
+<style>
+
+</style>
+<script type="text/javascript">
+
+var slideimages = new Array() 
+slideimages[0] = new Image()
+slideimages[0].src = "a.jpg"
+slideimages[1] = new Image()
+slideimages[1].src = "b.jpg"
+slideimages[2] = new Image()
+slideimages[2].src = "c.jpg"
+slideimages[3] = new Image()
+slideimages[3].src = "d.jpg"
+slideimages[4] = new Image()
+slideimages[4].src = "e.jpg"
+slideimages[5] = new Image()
+slideimages[5].src = "f.jpg"
+slideimages[6] = new Image()
+slideimages[6].src = "g.jpg"
+slideimages[7] = new Image()
+slideimages[7].src = "h.jpg"
+
+</script>
+</head>
+
+<body bgcolor="lightblue">
+<b style="position:absolute;top:1px; left:550px;font-family:lucida calligraphy; z-index=:4 ;color:purple;font-size:30px ;font-weight:200 ">
+SLIDE SHOW</b>
+<b style="position:absolute;top:600px; left:550px;font-family:lucida calligraphy; z-index=:4 ;color:purple;font-size:30px ;font-weight:200 ">
+PHOTO GALLARY</b>
+<img src="a.jpg" id="slide" style="position:absolute;left:10%;top:50px;height:500px;width:1000px;border:,solid 10px #123456"/>
+
+<script>
+var step=0
+function slideit(){
+if(!document.images)
+return
+document.getElementById('slide').src = slideimages[step].src
+if (step<2)
+  step++
+else
+  step=0
+setTimeout("slideit()",2000)
+}
+slideit()
+</script>
+
+ 
+    <img src="a.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px;top:650px">
+   
+
+ 
+    <img src="b.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px;top:650px ">
+  
+  
+
+
+     <img src="c.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px;top:650px ">
+  
+  
+
+ 
+    <img src="d.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px ;top:650px">
+   
+
+ 
+    <img src="e.jpg" style="position:relative;width:300px;height:150px;border-style:, groove 10px;top:690px ">
+   
+   
+ 
+    <img src="f.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px;top:690px ">
+   
+   
+ 
+    <img src="g.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px ;top:690px">
+   
+
+   
+ 
+    <img src="h.jpg" style="position:relative;width:300px;height:150px;border:, groove 10px ;top:690px">
+  
+</body>

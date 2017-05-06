@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="qxsl.xsl"?>
+
+<class>
+ <student>
+ <firstname>Kalishma</firstname>
+ <lastname>Vyas</lastname>
+ <userid>BTBTS12345</userid>
+ <pass>12345</pass>
+ <email>kate@gmail.com</email>
+ <address>London ,LA</address>
+ <phone>7894561332</phone>
+ </student>
+ <student>
+ <firstname>Ritin</firstname>
+ <lastname>Goyal</lastname>
+ <userid>BTBTC34567</userid>
+ <pass>34567</pass>
+ <email>ritin@gmail.com</email>
+ <address>Mumbai</address>
+ <phone>7894560032</phone>
+ </student>
+ <student>
+ <firstname>Shabbir</firstname>
+ <lastname>Singh</lastname>
+ <userid>BTBTC67890</userid>
+ <pass>67890</pass>
+ <email>shabbir@gmail.com</email>
+ <address>S-678 Pune</address>
+ <phone>7894561332</phone>
+ </student>
+</class>

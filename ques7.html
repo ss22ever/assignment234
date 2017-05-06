@@ -1,0 +1,112 @@
+<html>
+       <head><title>Program 8</title>
+	   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+       <body text-alignlign ='center '><br><br><br>
+             <input type="button" align ='center 'class=' btn btn-primary'value="NOW" onclick="now()"><br><br>
+               <input type="button"  align ='center ' class='btn btn-danger' value="YESTERDAY" onclick="yesterday()"><br><br>
+		 <input type="button" align ='center ' class='btn btn-warning' value="TEN YEARS BEFORE" onclick="ten()"><br><br>
+		<input type="button" align ='center '  class='btn btninfo'value="ONE WEEK BEFORE" onclick="week()">
+             <script type="text/javascript">
+	function now()
+	{
+	      var date=new Date();
+	      var day=date.getDate();
+	      var m=date.getMonth();
+	      var yr=date.getFullYear();
+	      m=m+1;
+	      var hr=date.getHours();
+	      var mi=date.getMinutes();
+	      var sec=date.getSeconds();
+	      alert("Date="+day+"/"+m+"/"+yr+"Time="+hr+":"+mi+":"+sec);
+	}
+	function yesterday()
+	{
+	     var date=new Date();
+	     var d=date.getDate();
+	     var d1=d-1;
+	     if(d1==0)
+	     {
+	        var m=date.getMonth();
+	        m=m+1;
+		m=m-1;
+	        if(m==1||m==3||m==5||m==7||m==31||m==10||m==12)
+		{
+	          d1=31;
+		 
+	        }
+		else if(m==2)
+		     {
+			d1=28;
+		     }
+		     else
+		     {
+			d1=30;
+		     }
+	     }
+	    else
+	     {
+	          var m=date.getMonth();
+	          m=m+1;
+	     }
+	     var yr=date.getFullYear();
+	     var hr=date.getHours();
+	      var mi=date.getMinutes();
+	      var sec=date.getSeconds();
+	    alert("Date="+d1+"/"+m+"/"+yr+"<br>"+"Time="+hr+":"+mi+":"+sec);
+	}
+	function ten()
+	{
+	      var date=new Date();
+	      var d=date.getDate();
+	      var m=date.getMonth();
+	      var yr=date.getFullYear();
+	      yr=yr-10
+	      m=m+1;
+	      var hr=date.getHours();
+	      var mi=date.getMinutes();
+	      var sec=date.getSeconds();
+	      alert("Date="+d+"/"+m+"/"+yr+"Time="+hr+":"+mi+":"+sec);
+	}
+        function week()
+	{
+	     var date=new Date();
+	     var d=date.getDate();
+	    
+	     if(d==1||d==2||d==3||d==4||d==5||d==6||d==7)
+	     {
+	        var m=date.getMonth();
+	        m=m+1;
+		//m=m-1;
+	        if(m==1||m==3||m==5||m==7||m==8||m==10||m==12)
+		{
+		  d=7-d;
+		  d1=31-d;
+		 
+	        }
+		else if(m==2)
+		     {
+			d=7-d;
+			d1=28-d;
+		     }
+		     else
+		     {
+			d=7-d;
+			d1=30-d;
+		     }
+	     }
+	    else
+	     {
+		  d1=d-7;
+	          var m=date.getMonth();
+	          m=m+1;
+	     }
+	     var yr=date.getFullYear();
+	     var hr=date.getHours();
+	      var mi=date.getMinutes();
+	      var sec=date.getSeconds();
+	    alert("Date="+d1+"/"+m+"/"+yr+"Time="+hr+":"+mi+":"+sec);
+	}
+             </script>
+       </body>
+</html>
